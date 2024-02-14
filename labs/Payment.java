@@ -9,9 +9,10 @@ class payment {
         int daysMissed = sc.nextInt();
         System.out.print("What is the daily rate: ");
         double rate = sc.nextDouble();
+        sc.close();
 
         double total = rate * daysMissed;
         System.out.printf("Hello, %s, your fine is %.2f", name, total);
-        
+
     }
 }
