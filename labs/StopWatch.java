@@ -5,10 +5,10 @@
  * Lab 5
  * Description: This program creates a simple stopwatch using Java Swing and the Calendar class.
  */
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Calendar;
+import java.awt.FlowLayout;
 
 import javax.swing.*;
 
@@ -88,6 +88,7 @@ public class StopWatch implements ActionListener {
      * Resets the stopwatch by setting the isRunning flag to false,
      * the elapsedTime to 0, and updating the text of the jlab label.
      */
+    @SuppressWarnings("unused")
     private void reset() {
         isRunning = false;
         elapsedTime = 0;
