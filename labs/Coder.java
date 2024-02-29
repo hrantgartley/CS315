@@ -18,8 +18,8 @@ import java.awt.FlowLayout;
 public class Coder implements ActionListener {
     private JFrame frame;
     private JLabel label;
-    private JTextField textField;
-    private JTextField textField2;
+    private JTextField textFieldOne;
+    private JTextField textFieldTwo;
     private Button encodeButton;
     private Button decodeButton;
     private Button clear;
@@ -31,9 +31,9 @@ public class Coder implements ActionListener {
      */
     public Coder() {
         frame = new JFrame("JTextField Demo");
-        label = new JLabel("Enter your name: ");
-        textField = new JTextField(20);
-        textField2 = new JTextField(20);
+        label = new JLabel("Enter a message to decode/encode:");
+        textFieldOne = new JTextField(20);
+        textFieldTwo = new JTextField(20);
         encodeButton = new Button("Encode");
         decodeButton = new Button("Decode");
         clear = new Button("Clear");
@@ -41,8 +41,8 @@ public class Coder implements ActionListener {
         frame.setLayout(new FlowLayout());
 
         frame.add(label);
-        frame.add(textField);
-        frame.add(textField2);
+        frame.add(textFieldOne);
+        frame.add(textFieldTwo);
         frame.add(encodeButton);
         frame.add(decodeButton);
         frame.add(clear);
@@ -75,27 +75,31 @@ public class Coder implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         // check if encode button was pressed
         if (ae.getSource() == encodeButton) {
-            StringBuilder text = new StringBuilder(textField.getText());
+            StringBuilder text = new StringBuilder(textFieldOne.getText());
             String encoded = "";
             for (int i = 0; i < text.length(); i++) {
                 char c = text.charAt(i);
                 c += 1;
                 encoded += c;
             }
-            textField2.setText(encoded);
+            textFieldTwo.setText(encoded);
             System.out.println("Encoded Text: " + encoded);
         } else if (ae.getSource() == decodeButton) {
-            String text = textField2.getText();
+            String text = textFieldTwo.getText();
             String decoded = "";
             for (int i = 0; i < text.length(); i++) {
                 char c = text.charAt(i);
                 c -= 1;
                 decoded += c;
             }
-            textField.setText(decoded);
+            textFieldOne.setText(decoded);
+            System.out.println("Encoded Text: " + decoded);
         } else if (ae.getSource() == clear) {
-            textField.setText("");
-            textField2.setText("");
+            textFieldOne.setText("");
+            textFieldTwo.setText("");
+            System.out.println("Clear pressed");
+        } else {
+            label.setText("Invalid Event");
         }
     }
 
@@ -103,8 +107,8 @@ public class Coder implements ActionListener {
      * Registers action listeners for the text fields and buttons.
      */
     public void run() {
-        textField.addActionListener(this);
-        textField2.addActionListener(this);
+        textFieldOne.addActionListener(this);
+        textFieldTwo.addActionListener(this);
         encodeButton.addActionListener(this);
         decodeButton.addActionListener(this);
         clear.addActionListener(this);
