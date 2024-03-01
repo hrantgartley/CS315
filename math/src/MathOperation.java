@@ -96,7 +96,7 @@ public class MathOperation extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void processButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_processButtonActionPerformed
+    private void processButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         lblAddition.setText("Addition: 10 + 100 = " + Integer.toString(10 + 100));
         lblSubtraction.setText("Subtraction: 100 - 10 = " + Integer.toString(100 - 10));
