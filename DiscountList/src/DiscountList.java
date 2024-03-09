@@ -146,6 +146,14 @@ public class DiscountList extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * This method is called when the "Process" button is clicked.
+     * It retrieves the values entered in the text fields for price, quantity, and discount,
+     * calculates the discounted price, and adds it to the list of items.
+     * If any of the input values are not valid numeric values, it displays an error message.
+     *
+     * @param evt the ActionEvent object representing the button click event
+     */
     private void processBtnActionPerformed(java.awt.event.ActionEvent evt) {
         try {
             double price = Double.parseDouble(tbPrice.getText());
@@ -159,11 +167,19 @@ public class DiscountList extends javax.swing.JFrame {
         }
     }
 
+    /**
+     * Clears the form when the clear button is clicked.
+     * 
+     * @param evt the action event triggered by the clear button
+     */
     private void clearBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_clearBtnActionPerformed
         clear();
     }// GEN-LAST:event_clearBtnActionPerformed
      //
 
+    /**
+     * Clears the text fields in the user interface.
+     */
     private void clear() {
         tbDiscount.setText("");
         tbItem.setText("");
