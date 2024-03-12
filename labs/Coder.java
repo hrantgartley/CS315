@@ -55,6 +55,7 @@ public class Coder implements ActionListener {
      * The main method is the entry point of the program.
      * It creates an instance of the Coder class and calls its run method.
      *
+     *
      * @param args the command line arguments
      */
     public static void main(String[] args) {
