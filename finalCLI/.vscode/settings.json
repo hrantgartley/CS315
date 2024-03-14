@@ -2,5 +2,25 @@
   "java.project.referencedLibraries": {
     "include": ["lib/**/*.jar", "g:\\MAIN_FOLDER\\JAVA\\json-simple-1.1.1.jar"],
     "exclude": ["lib/json-simple-1.1.1.jar"]
-  }
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#f9ebf4",
+    "activityBar.background": "#f9ebf4",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#81ac33",
+    "activityBarBadge.foreground": "#15202b",
+    "commandCenter.border": "#15202b99",
+    "sash.hoverBorder": "#f9ebf4",
+    "statusBar.background": "#edc4de",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#e19dc8",
+    "statusBarItem.remoteBackground": "#edc4de",
+    "statusBarItem.remoteForeground": "#15202b",
+    "titleBar.activeBackground": "#edc4de",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#edc4de99",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "peacock.color": "#edc4de"
 }
